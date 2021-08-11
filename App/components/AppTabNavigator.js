@@ -11,6 +11,8 @@ function AppTabNavigator({ screens }) {
     <Tab.Navigator>
       {screens.map((screen) => (
         <Tab.Screen
+          exact
+          key={screen.name}
           name={screen.name}
           component={screen.Component}
           options={{

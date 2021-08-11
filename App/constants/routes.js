@@ -5,5 +5,7 @@ export default Object.freeze({
     major: 'انتخاب رشته',
     profile: 'پروفایل',
     test: 'آزمون',
-    toolBox: 'جعبه ابزار'
+    toolBox: 'جعبه ابزار',
+    generalTest: 'آزمون های جامع',
+    subjectTest: 'آزمون های مبحثی'
 })
