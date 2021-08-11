@@ -3,14 +3,11 @@ import { NavigationContainer } from "@react-navigation/native";
 
 import routes from "../constants/routes";
 
-import EstimationScreen from "../screens/EstimationScreen";
-import GoalingScreen from "../screens/GoalingScreen";
 import LearningScreen from "../screens/LearningScreen";
-import MajorScreen from "../screens/MajorScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import TestScreen from "../screens/TestScreen";
 import AppTabNavigator from "../components/AppTabNavigator";
-import ToolBoxScreen from "../screens/ToolBoxScreen";
+import StackNavigator from "./StackNavigator";
 
 function AppNavigator(props) {
   return (
@@ -34,7 +31,7 @@ function AppNavigator(props) {
           },
           {
             name: routes.toolBox,
-            Component: ToolBoxScreen,
+            Component: StackNavigator,
             icon: "architecture",
           },
         ]}
