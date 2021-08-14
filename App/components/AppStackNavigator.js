@@ -3,20 +3,28 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import NavListScreen from "../components/NavListScreen";
 
-function AppStackNavigator({ mainName, list }) {
+function AppStackNavigator({ mainName, list, MainComponent }) {
   const Stack = createStackNavigator();
 
   return (
     <Stack.Navigator>
-      <Stack.Screen exact
+      <Stack.Screen
+        exact
         options={{ headerShown: false }}
         name={mainName}
-        component={({ navigation }) => (
-          <NavListScreen
-            navigation={navigation}
-            items={list.map((li) => ({ icon: li.icon, navigateTo: li.name }))}
-          />
-        )}
+        component={
+          MainComponent
+            ? MainComponent
+            : ({ navigation }) => (
+                <NavListScreen
+                  navigation={navigation}
+                  items={list.map((li) => ({
+                    icon: li.icon,
+                    navigateTo: li.name,
+                  }))}
+                />
+              )
+        }
       />
       {list.map((li) => (
         <Stack.Screen key={li.name} name={li.name} component={li.Component} />

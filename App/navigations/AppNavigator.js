@@ -12,6 +12,7 @@ import GoalingScreen from "../screens/GoalingScreen";
 import MajorScreen from "../screens/MajorScreen";
 import AppTabNavigator from "../components/AppTabNavigator";
 import AppStackNavigator from "../components/AppStackNavigator";
+import LearningNavigator from "./LearningNavigator";
 
 function AppNavigator(props) {
   return (
@@ -25,7 +26,7 @@ function AppNavigator(props) {
           },
           {
             name: routes.learning,
-            Component: LearningScreen,
+            Component: LearningNavigator,
             icon: "psychology",
           },
           {

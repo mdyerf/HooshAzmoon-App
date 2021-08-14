@@ -7,5 +7,7 @@ export default Object.freeze({
     test: 'آزمون',
     toolBox: 'جعبه ابزار',
     generalTest: 'آزمون های جامع',
-    subjectTest: 'آزمون های مبحثی'
+    subjectTest: 'آزمون های مبحثی',
+    course: 'درس',
+    chapter: 'فصل'
 })
