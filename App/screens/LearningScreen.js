@@ -11,6 +11,7 @@ import setLearningTestsData, {
   getBooksGroups,
   learningDbReady,
 } from "../database/testsDb";
+import { getUser } from "../cache/user";
 
 function LearningScreen({ navigation }) {
   const [dbReady, setDbReady] = useState(false);
@@ -27,7 +28,7 @@ function LearningScreen({ navigation }) {
   }, []);
 
   const loadDb = async () => {
-    testsData = await getLearningTestsData("TODO");
+    testsData = await getLearningTestsData(getUser().Major);
     await setLearningTestsData(testsData);
   };
 
@@ -69,7 +70,7 @@ function LearningScreen({ navigation }) {
     );
   }
 
-  getBooksGroups("TODO").then((groups) => {
+  getBooksGroups(getUser().Major).then((groups) => {
     setGroups(groups);
   });
 
