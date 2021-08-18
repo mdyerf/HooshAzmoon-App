@@ -5,7 +5,7 @@ import { AnimatedCircularProgress } from "react-native-circular-progress";
 
 import colors from "../constants/colors";
 
-function ParentListItem({ text, children }) {
+function ParentListItem({ text, children, percent }) {
   const [open, setOpen] = useState(false);
   function handleTap() {
     setOpen(!open);
@@ -16,7 +16,7 @@ function ParentListItem({ text, children }) {
         <AnimatedCircularProgress
           size={30}
           width={3}
-          fill={45}
+          fill={percent}
           tintColor="#00e0ff"
           backgroundColor="white"
         >

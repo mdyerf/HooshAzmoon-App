@@ -158,3 +158,7 @@ const getLearningTests = (subjectId) => [
     ]
   },
 ];
+
+const getLearningTestsData = async (major) => [];
+
+export default getLearningTestsData;
